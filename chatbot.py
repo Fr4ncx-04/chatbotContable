@@ -5,8 +5,6 @@ import os
 
 load_dotenv()
 api_key = os.getenv("MyApiKey")
-
-# Configura tu API Key aquí o usa variables de entorno
 client = OpenAI(api_key=api_key)
 
 # Título de la app
@@ -14,7 +12,7 @@ st.title("Hola, soy un Chatbot de Contabilidad y Finanzas")
 st.write("Puedes preguntarme cualquier cosa relacionada a la contabilidad y finanzas")
 st.write("Me asegurare de solucionar cualquier duda de manera clara y concisa")
 
-# Inicializa los mensajes de la conversación
+# Inicializador de los mensajes de la conversación
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "system", "content": "Eres un experto en contabilidad y finanzas. Responde como asesor financiero profesional con explicaciones claras y prácticas."}
